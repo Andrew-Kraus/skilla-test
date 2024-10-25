@@ -1,0 +1,94 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.custom-select {
+    position: relative;
+    font-size: 14px;
+    display: flex;
+    color: $low-visible;
+}
+
+.custom-select__header {
+    padding: 10px;
+    padding-left: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    width: 106px;
+    
+    &:hover {
+        .arrow {
+            color: $blue;
+        }
+    }
+
+    p {
+        &.selected {
+            color: $blue;
+        }
+    }
+
+    .arrow {
+        @include icon-arrow;
+        margin-bottom: -2px;
+
+        &.down {
+           rotate: 180deg; 
+        }
+
+        &.up {
+            rotate: 360deg;
+        }
+    }
+}
+
+.custom-select__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    border-top: none;
+    z-index: 10;
+    font-size: 12px;
+    width: 133px;
+}
+
+.custom-select__option {
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $on-hover;
+    }
+
+    &.selected {
+        color: $blue;
+    }
+
+    &.unselected {
+        color: $low-visible;
+    }
+}
+
+.custom-select__reset {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        svg {
+            color: $blue;
+        }
+    }
+
+    svg {
+        @include icon-default;
+        width: 9px;
+        height: 9px;
+        margin-left: 8px;
+        margin-bottom: -2px;
+    }
+}

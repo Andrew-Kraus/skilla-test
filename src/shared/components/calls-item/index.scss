@@ -1,0 +1,60 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.calls__grade {
+    @include icon-grade;
+}
+
+.calls__icon-call {
+    @include icon-call-type;
+}
+
+.calls__icon-arrow {
+    @include icon-arrow;
+}
+
+.calls__error-text {
+    color: $red;
+}
+
+.calls__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.calls__source {
+    color: $low-visible;
+}
+
+.calls__avatar-absent {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #EAF0FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        color: #ADBFDF;
+    }
+}
+
+.calls__contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.calls__contact-name {
+    font-weight: 500;
+}
+
+.calls__contact-number {
+
+    &.low-visible {
+        color: $low-visible;
+    }
+}
+

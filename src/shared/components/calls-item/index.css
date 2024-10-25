@@ -1,0 +1,91 @@
+.calls__grade {
+  padding: 6px 8px 6px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+}
+.calls__grade.bad {
+  border: 1px solid #EA1A4F;
+  background: #FEE9EF;
+  color: #EA1A4F;
+}
+.calls__grade.fine {
+  border: 1px solid #ADBFDF;
+  background: #D8E4FB;
+  color: #122945;
+}
+.calls__grade.great {
+  border: 1px solid #28A879;
+  background: #DBF8EF;
+  color: #28A879;
+}
+
+.calls__icon-call {
+  width: 24px;
+  height: 24px;
+}
+.calls__icon-call.incoming {
+  color: #002CFB;
+}
+.calls__icon-call.outgoing {
+  color: #28A879;
+  rotate: 180deg;
+}
+.calls__icon-call.missed {
+  color: #EA1A4F;
+}
+.calls__icon-call.no-answer {
+  color: #EA1A4F;
+  rotate: 180deg;
+}
+
+.calls__icon-arrow {
+  width: 24px;
+  height: 24px;
+  color: #ADBFDF;
+  cursor: pointer;
+}
+.calls__icon-arrow:hover {
+  color: #002CFB;
+}
+
+.calls__error-text {
+  color: #EA1A4F;
+}
+
+.calls__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.calls__source {
+  color: #5E7793;
+}
+
+.calls__avatar-absent {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #EAF0FA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calls__avatar-absent svg {
+  color: #ADBFDF;
+}
+
+.calls__contact {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.calls__contact-name {
+  font-weight: 500;
+}
+
+.calls__contact-number.low-visible {
+  color: #5E7793;
+}/*# sourceMappingURL=index.css.map */

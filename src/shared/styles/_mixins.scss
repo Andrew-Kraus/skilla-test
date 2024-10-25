@@ -1,0 +1,80 @@
+@import './variables';
+
+@mixin icon-grade {
+    padding: 6px 8px 6px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: inline-block;
+
+    &.bad {
+        border: 1px solid $red;
+        background: #FEE9EF;
+        color: $red;
+    }
+
+    &.fine {
+        border: 1px solid $gray;
+        background: #D8E4FB;
+        color: $dark-text;
+    }
+
+    &.great {
+        border: 1px solid $green;
+        background: #DBF8EF;
+        color: $green;
+    }
+}
+
+@mixin icon-call-type {
+    width: 24px;
+    height: 24px;
+
+    &.incoming {
+        color: $blue;
+    }
+
+    &.outgoing {
+        color: $green;
+        rotate: 180deg;
+    }
+
+    &.missed {
+        color: $red;
+    }
+
+    &.no-answer {
+        color: $red;
+        rotate: 180deg;
+    }
+}
+
+
+@mixin icon-arrow {
+    width: 24px;
+    height: 24px;
+    color: $gray;
+    cursor: pointer;
+
+    &:hover {
+        color: $blue;
+    }
+}
+
+@mixin icon-calendar {
+    width: 16px;
+    height: 18px;
+    color: $gray;
+
+    &:hover {
+        color: $blue;
+    }
+}
+
+
+@mixin icon-default {
+    color: $gray;
+
+    &:hover {
+        color: $blue;
+    }
+}

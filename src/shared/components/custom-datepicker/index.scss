@@ -1,0 +1,122 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.custom-datepicker {
+    position: relative;
+    width: 230px;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.custom-datepicker__header {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    color: $low-visible;
+
+    p {
+        color: $blue;
+    }
+}
+
+.custom-datepicker__dates-container {
+    display: flex;
+
+    p {
+        color: #ADBFDF;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+
+.custom-datepicker__container {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &:hover {
+        .custom-datepicker__calendar {
+            color: $blue;
+        }
+    }
+}
+
+.custom-datepicker__arrow {
+    @include icon-arrow;
+
+    &.left {
+        rotate: 270deg;
+    }
+
+    &.right {
+        rotate: 90deg;
+    }
+}
+
+.custom-datepicker__calendar {
+    @include icon-default;
+    margin-right: 8px;
+}
+
+.custom-datepicker__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    border-top: none;
+    z-index: 10;
+    font-size: 12px;
+}
+
+
+.custom-datepicker__list-dates {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+.custom-datepicker__input {
+    color: #ADBFDF;
+}
+
+.custom-datepicker__input-calendar {
+    display: flex;
+    color: #ADBFDF;
+}
+
+.custom-datepicker__dates {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.custom-datepicker__option {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $on-hover;
+    }
+
+    &.selected {
+        color: $blue;
+    }
+
+    &.unselected {
+        color: $low-visible;
+    }
+}
